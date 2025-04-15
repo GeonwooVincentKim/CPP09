@@ -6,15 +6,15 @@
 #    By: geonwkim <geonwkim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/04 16:16:10 by geonwkim          #+#    #+#              #
-#    Updated: 2025/04/04 16:16:52 by geonwkim         ###   ########.fr        #
+#    Updated: 2025/04/15 22:38:54 by geonwkim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = ex00
-SRCS = main.cpp
+NAME = btc
+SRCS = main.cpp BitcoinExchange.cpp
 OBJS = $(SRCS:.cpp=.o)
 RM = rm -f
 
