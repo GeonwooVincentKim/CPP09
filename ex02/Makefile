@@ -6,15 +6,15 @@
 #    By: geonwkim <geonwkim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/04 16:16:30 by geonwkim          #+#    #+#              #
-#    Updated: 2025/04/18 22:41:08 by geonwkim         ###   ########.fr        #
+#    Updated: 2025/04/18 22:46:52 by geonwkim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = ex00
-SRCS = main.cpp
+NAME = PmergeMe
+SRCS = main.cpp PmergeMe.cpp
 OBJS = $(SRCS:.cpp=.o)
 RM = rm -f
 
