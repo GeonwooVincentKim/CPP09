@@ -6,15 +6,15 @@
 #    By: geonwkim <geonwkim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/04 16:16:20 by geonwkim          #+#    #+#              #
-#    Updated: 2025/04/04 16:17:10 by geonwkim         ###   ########.fr        #
+#    Updated: 2025/04/18 22:14:12 by geonwkim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = ex01
-SRCS = main.cpp
+NAME = RPN
+SRCS = main.cpp RPN.cpp
 OBJS = $(SRCS:.cpp=.o)
 RM = rm -f
 
