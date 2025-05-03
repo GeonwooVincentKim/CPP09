@@ -6,7 +6,7 @@
 /*   By: geonwkim <geonwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 21:50:23 by geonwkim          #+#    #+#             */
-/*   Updated: 2025/04/18 22:05:37 by geonwkim         ###   ########.fr       */
+/*   Updated: 2025/05/03 22:46:59 by geonwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,6 +110,14 @@ void BitcoinExchange::execute(const char *fileName)
 
 	while (std::getline(inputFile, line))
 	{
+		// Check for extra columns
+		size_t pipeCount = std::count(line.begin(), line.end(), '|');
+		if (pipeCount != 1)
+		{
+			std::cout << "Error: bad input => " << line << std::endl;
+			continue;
+		}
+
 		std::string date, value;
 		double priceValue;
 		std::istringstream ss(line);
