@@ -6,13 +6,14 @@
 /*   By: geonwkim <geonwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 22:08:27 by geonwkim          #+#    #+#             */
-/*   Updated: 2025/04/18 22:31:02 by geonwkim         ###   ########.fr       */
+/*   Updated: 2025/05/03 23:41:49 by geonwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef RPN_HPP
 # define RPN_HPP
 
+# include <limits>
 # include <iostream>
 # include <string>
 # include <stack>

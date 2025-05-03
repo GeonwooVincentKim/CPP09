@@ -6,7 +6,7 @@
 /*   By: geonwkim <geonwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 22:44:48 by geonwkim          #+#    #+#             */
-/*   Updated: 2025/04/22 19:55:51 by geonwkim         ###   ########.fr       */
+/*   Updated: 2025/05/03 23:22:10 by geonwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,7 @@ void sort_pairs(std::list<std::pair<int, int> > *listy)
 }
 
 // Do merge sort with recursive approach splitting the list in half each time and merging them back together
+// 再帰関数を使っている
 void mergeSort(std::list<std::pair<int, int> >::iterator start, std::list<std::pair<int, int> >::iterator end, size_t size)
 {
 	if (size == 0 && start != end)
@@ -307,7 +308,7 @@ void print_after2(std::deque<int> main_chain)
 }
 
 
-//Expalination:
+//Explanation of the algorithm:
 /*
 1. Create pairs from the input arguments and if the amount of arguments is odd, store the last argument as additional_value
 	//               23 10 10 97 42 32 40 84 29 26 66 96 57 13 46 30 91 48 11 <- odd

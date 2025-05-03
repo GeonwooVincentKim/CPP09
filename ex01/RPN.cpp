@@ -6,7 +6,7 @@
 /*   By: geonwkim <geonwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 22:08:38 by geonwkim          #+#    #+#             */
-/*   Updated: 2025/04/18 22:30:59 by geonwkim         ###   ########.fr       */
+/*   Updated: 2025/05/03 23:41:32 by geonwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,16 +85,26 @@ void RPN::_executeStack(double (RPN::*f)(double, double)) {
 
 // 加算
 double RPN::_plus(double a, double b) {
+    if (b > 0 && a > std::numeric_limits<int>::max() - b)
+        throw RPN::invalidArgument("Error: integer overflow in addition");
+    if (b < 0 && a < std::numeric_limits<int>::min() - b)
+        throw RPN::invalidArgument("Error: integer underflow in addition");
     return b + a;
 }
 
 // 減算
 double RPN::_minus(double a, double b) {
+    if (a > 0 && b < std::numeric_limits<int>::min() + a)
+        throw RPN::invalidArgument("Error: integer underflow in subtraction");
+    if (a < 0 && b > std::numeric_limits<int>::max() + a)
+        throw RPN::invalidArgument("Error: integer overflow in subtraction");
     return b - a;
 }
 
 // 乗算
 double RPN::_multiply(double a, double b) {
+    if (a != 0 && (b > std::numeric_limits<int>::max() / a || b < std::numeric_limits<int>::min() / a))
+        throw RPN::invalidArgument("Error: integer overflow in multiplication");
     return b * a;
 }
 
